@@ -1,12 +1,8 @@
 #!/bin/bash
 # .bash_profile
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
-
-# ssh agent stuff
-#eval $(ssh-agent)
-#export SSH_AGENT_PID=$(pgrep -ou $USER ssh-agent)
-#export SSH_AUTH_SOCK="$(find -L /tmp -type s -user $USER -name 'agent.*' 2>/dev/null | head -1)"
+# source ~/.bashrc
+[[ -f ~/.bashrc ]] && source ~/.bashrc
 
 # auto launch x
 #[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec xinit
