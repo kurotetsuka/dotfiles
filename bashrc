@@ -11,9 +11,15 @@
 
 # pgp setup
 # start gnupg ( if it isn't already running )
-# gpg-agent --daemon --write-env-file "${HOME}/.gnupg/agent-info"
-source "${HOME}/.gnupg/agent-info"
-export GPG_AGENT_INFO
+start-gpgagent(){
+	eval $(gpg-agent --daemon --write-env-file "${HOME}/.gnupg/agent-info")
+	#export GPG_AGENT_INFO
+}
+if [[ -e "${HOME}.gnupg/S.gpg-agent" ]]; then
+	source "${HOME}/.gnupg/agent-info"
+	export GPG_AGENT_INFO
+fi
+export GNUPGHOME="~/keys/gpg/"
 
 # aliases and functions
 alias ls="ls --color=auto"
@@ -24,7 +30,7 @@ alias ss="scrot -s scrot_%Y-%m-%d_%H%M%S.png"
 export EDITOR="subl3 -w"
 # export PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
 export PATH=$PATH":.local/bin"
-# Set ld library path
+# set ld library path for rustc
 LD_LIBRARY_PATH="/usr/local/lib:/usr/lib"
 export LD_LIBRARY_PATH
 # bspwm panel
