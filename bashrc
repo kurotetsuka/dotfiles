@@ -11,9 +11,14 @@
 
 # pgp setup
 # start gnupg ( if it isn't already running )
-start-gpgagent(){
+gpgagent-start(){
 	eval $(gpg-agent --daemon --write-env-file "${HOME}/.gnupg/agent-info")
-	#export GPG_AGENT_INFO
+}
+gpgagent-stop(){
+	killall gpg-agent
+}
+gpgagent-reload(){
+	echo RELOADAGENT | gpg-connect-agent
 }
 if [[ -e "${HOME}.gnupg/S.gpg-agent" ]]; then
 	source "${HOME}/.gnupg/agent-info"
@@ -28,12 +33,13 @@ alias ll="ls -l --color=auto"
 alias l.="ls -al --color=auto"
 alias ss="scrot -s scrot_%Y-%m-%d_%H%M%S.png"
 export EDITOR="subl3 -w"
-# export PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
+# add to path
 export PATH=$PATH":.local/bin"
+export PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
 # set ld library path for rustc
 LD_LIBRARY_PATH="/usr/local/lib:/usr/lib"
 export LD_LIBRARY_PATH
-# bspwm panel
+# bspwm panel thingy
 export PANEL_FIFO="/tmp/panel-fifo"
 
 # colours :D
@@ -70,3 +76,6 @@ export PS4="$awesome_colour>>>$no_colour "
 
 # source encrypted partition handling functions
 [[ -f ~/p/crypt/crypt.sh ]] && source ~/p/crypt/crypt.sh
+
+# fix little gnome terminal bug
+source /etc/profile.d/vte.sh
