@@ -34,8 +34,9 @@ alias l.="ls -al --color=auto"
 alias ss="scrot -s scrot_%Y-%m-%d_%H%M%S.png"
 export EDITOR="subl3 -w"
 # add to path
-export PATH=$PATH":.local/bin"
-export PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
+export PATH=$PATH":~/.local/bin"
+export PATH=$PATH":$(ruby -rubygems -e "puts Gem.user_dir")/bin"
+export PATH=$PATH":~/.cabal/bin"
 # set ld library path for rustc
 LD_LIBRARY_PATH="/usr/local/lib:/usr/lib"
 export LD_LIBRARY_PATH
@@ -68,6 +69,7 @@ face=\
 fi\`$no_colour"
 
 # set up prompts
+# useful char backups: λ ➜ 
 export PS1="$bpurple[$awesome_colour\u$bpurple@$awesome_colour\h$no_colour $face $bblue\W$bpurple]\$$no_colour "
 #export PS1="$awesome_colour\$$no_colour "
 export PS2="$awesome_colour>$no_colour "
@@ -75,7 +77,8 @@ export PS3="$awesome_colour>>$no_colour "
 export PS4="$awesome_colour>>>$no_colour "
 
 # source encrypted partition handling functions
-[[ -f ~/p/crypt/crypt.sh ]] && source ~/p/crypt/crypt.sh
+[[ -f ~/p/crypt/crypt.sh ]] &&
+	source ~/p/crypt/crypt.sh
 
 # fix little gnome terminal bug
 source /etc/profile.d/vte.sh
