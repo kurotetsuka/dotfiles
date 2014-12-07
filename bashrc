@@ -43,6 +43,12 @@ export LD_LIBRARY_PATH
 # bspwm panel thingy
 export PANEL_FIFO="/tmp/panel-fifo"
 
+# apexctl stuff
+apex-setup(){
+	xmodmap ~/.Xmodmap
+	apexctl-profile
+}
+
 # colours :D
 white="\[\e[0;37m\]"
 bwhite="\[\e[1;37m\]"
