@@ -24,6 +24,7 @@ if [[ -e "${HOME}.gnupg/S.gpg-agent" ]]; then
 	source "${HOME}/.gnupg/agent-info"
 	export GPG_AGENT_INFO
 fi
+export PINENTRY_USER_DATA="USE_CURSES=1"
 export GNUPGHOME="~/keys/gpg/"
 
 # aliases and functions
@@ -32,6 +33,7 @@ alias la="ls -a --color=auto"
 alias ll="ls -l --color=auto"
 alias l.="ls -al --color=auto"
 alias ss="scrot -s scrot_%Y-%m-%d_%H%M%S.png"
+alias R="R --no-save -q"
 export EDITOR="subl3 -w"
 # add to path
 export PATH=$PATH":~/.local/bin"
@@ -44,7 +46,7 @@ export LD_LIBRARY_PATH
 export PANEL_FIFO="/tmp/panel-fifo"
 
 # apexctl stuff
-apex-setup(){
+apex(){
 	xmodmap ~/.Xmodmap
 	apexctl-profile
 }
