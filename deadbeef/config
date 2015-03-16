@@ -28,7 +28,7 @@ gtkui.override_bar_colors 1
 gtkui.override_listview_colors 1
 gtkui.override_tabstrip_colors 1
 gtkui.statusbar.visible 1
-gtkui.tabscroll 0
+gtkui.tabscroll 1088
 gtkui.titlebar_playing :: %a - %t ::
 gtkui.titlebar_stopped :: Deadbeef ::
 gui_plugin GTK3
@@ -81,8 +81,8 @@ junk.enable_cp936_detection 1
 mainwin.geometry.h 735
 mainwin.geometry.maximized 0
 mainwin.geometry.w 1168
-mainwin.geometry.x 1866
-mainwin.geometry.y 188
+mainwin.geometry.x 145
+mainwin.geometry.y 90
 mpris_v1.enable 0
 mpris_v2.enable 1
 network.http_user_agent deadbeef
@@ -96,10 +96,10 @@ playlist.column.01 "Title" "%t" -1 506 0
 playlist.column.02 "Artist" "%a" -1 219 0
 playlist.column.03 "Album" "%b" -1 243 0
 playlist.column.04 "Duration" "%l" -1 80 0
-playlist.current 10
+playlist.current 11
 playlist.cursor.0 927
 playlist.cursor.1 119
-playlist.cursor.10 17
+playlist.cursor.10 13
 playlist.cursor.11 109
 playlist.cursor.2 -1
 playlist.cursor.3 0
@@ -145,8 +145,8 @@ replaygain_mode 0
 replaygain_scale 1
 resume.paused 1
 resume.playlist 10
-resume.position 429.19213
-resume.track 17
+resume.position 85.562377
+resume.track 13
 search.column.00 "Title" "%t" -1 417 0
 search.column.01 "Artist" "%a" -1 202 0
 search.column.02 "Album" "%b" -1 179 0
