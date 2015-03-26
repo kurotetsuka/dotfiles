@@ -78,15 +78,32 @@ fi\`$no_colour"
 
 # set up prompts
 # useful char backups: λ ➜ 
-export PS1="$bpurple[$awesome_colour\u$bpurple@$awesome_colour\h$no_colour $face $bblue\W$bpurple]\$$no_colour "
-#export PS1="$awesome_colour\$$no_colour "
-export PS2="$awesome_colour>$no_colour "
-export PS3="$awesome_colour>>$no_colour "
-export PS4="$awesome_colour>>>$no_colour "
+psa(){
+	export PS1="$bpurple[$awesome_colour\u$bpurple@$awesome_colour\h$no_colour $face $bblue\W$bpurple]\$$no_colour "
+	#export PS1="$awesome_colour\$$no_colour "
+	export PS2="$awesome_colour>$no_colour "
+	export PS3="$awesome_colour>>$no_colour "
+	export PS4="$awesome_colour>>>$no_colour "
+}
+psb(){
+	export PS1="$bpurple\$$no_colour "
+	#export PS1="$awesome_colour\$$no_colour "
+	export PS2="$awesome_colour>$no_colour "
+	export PS3="$awesome_colour>>$no_colour "
+	export PS4="$awesome_colour>>>$no_colour "
+}
+psc(){
+	export PS1="$bpurpleλ$no_colour "
+	#export PS1="$awesome_colour\$$no_colour "
+	export PS2="$awesome_colour>$no_colour "
+	export PS3="$awesome_colour>>$no_colour "
+	export PS4="$awesome_colour>>>$no_colour "
+}
+psa
 
 # source encrypted partition handling functions
 [[ -f ~/p/crypt/crypt.sh ]] &&
 	source ~/p/crypt/crypt.sh
 
 # fix little gnome terminal bug
-source /etc/profile.d/vte.sh
+#source /etc/profile.d/vte.sh
