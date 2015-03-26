@@ -4,6 +4,10 @@
 # if not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# source encrypted partition handling functions
+[[ -f ~/p/crypt/crypt.sh ]] &&
+	source ~/p/crypt/crypt.sh
+
 # ssh agent stuff
 #eval $(ssh-agent)
 #export SSH_AGENT_PID=$(pgrep -ou $USER ssh-agent)
@@ -45,12 +49,6 @@ export LD_LIBRARY_PATH
 # bspwm panel thingy
 export PANEL_FIFO="/tmp/panel-fifo"
 
-# apexctl stuff
-apex(){
-	xmodmap ~/.Xmodmap
-	apexctl-profile
-}
-
 # colours :D
 white="\[\e[0;37m\]"
 bwhite="\[\e[1;37m\]"
@@ -78,32 +76,44 @@ fi\`$no_colour"
 
 # set up prompts
 # useful char backups: λ ➜ 
-psa(){
+prompt-a(){
 	export PS1="$bpurple[$awesome_colour\u$bpurple@$awesome_colour\h$no_colour $face $bblue\W$bpurple]\$$no_colour "
 	#export PS1="$awesome_colour\$$no_colour "
 	export PS2="$awesome_colour>$no_colour "
 	export PS3="$awesome_colour>>$no_colour "
 	export PS4="$awesome_colour>>>$no_colour "
 }
-psb(){
+prompt-b(){
 	export PS1="$bpurple\$$no_colour "
 	#export PS1="$awesome_colour\$$no_colour "
 	export PS2="$awesome_colour>$no_colour "
 	export PS3="$awesome_colour>>$no_colour "
 	export PS4="$awesome_colour>>>$no_colour "
 }
-psc(){
+prompt-c(){
 	export PS1="$bpurpleλ$no_colour "
 	#export PS1="$awesome_colour\$$no_colour "
 	export PS2="$awesome_colour>$no_colour "
 	export PS3="$awesome_colour>>$no_colour "
 	export PS4="$awesome_colour>>>$no_colour "
 }
-psa
+# enable prompt a
+prompt-a
 
-# source encrypted partition handling functions
-[[ -f ~/p/crypt/crypt.sh ]] &&
-	source ~/p/crypt/crypt.sh
+# apexctl stuff
+apex(){
+	xmodmap ~/.Xmodmap
+	apexctl-profile
+	echo "Apex enabled"
+}
+
+# git push-all shortcut
+git-push-all(){
+	for remote in $(git remote | grep 'all\|origin\|official'); do
+		echo "Pushing to remote $remote"
+		git push $remote
+	done
+}
 
 # fix little gnome terminal bug
 #source /etc/profile.d/vte.sh
