@@ -28,7 +28,7 @@ gtkui.override_bar_colors 1
 gtkui.override_listview_colors 1
 gtkui.override_tabstrip_colors 1
 gtkui.statusbar.visible 1
-gtkui.tabscroll 1088
+gtkui.tabscroll 0
 gtkui.titlebar_playing :: %a - %t ::
 gtkui.titlebar_stopped :: Deadbeef ::
 gui_plugin GTK3
@@ -78,11 +78,11 @@ hotkeys_created 1
 ignore_archives 1
 junk.enable_cp1251_detection 1
 junk.enable_cp936_detection 1
-mainwin.geometry.h 735
+mainwin.geometry.h 745
 mainwin.geometry.maximized 0
-mainwin.geometry.w 1168
-mainwin.geometry.x 145
-mainwin.geometry.y 90
+mainwin.geometry.w 1177
+mainwin.geometry.x 135
+mainwin.geometry.y 81
 mpris_v1.enable 0
 mpris_v2.enable 1
 network.http_user_agent deadbeef
@@ -96,11 +96,11 @@ playlist.column.01 "Title" "%t" -1 506 0
 playlist.column.02 "Artist" "%a" -1 219 0
 playlist.column.03 "Album" "%b" -1 243 0
 playlist.column.04 "Duration" "%l" -1 80 0
-playlist.current 11
-playlist.cursor.0 927
+playlist.current 0
+playlist.cursor.0 700
 playlist.cursor.1 119
-playlist.cursor.10 13
-playlist.cursor.11 109
+playlist.cursor.10 1
+playlist.cursor.11 280
 playlist.cursor.2 -1
 playlist.cursor.3 0
 playlist.cursor.4 3
@@ -109,10 +109,10 @@ playlist.cursor.6 34
 playlist.cursor.7 17
 playlist.cursor.8 288
 playlist.cursor.9 2
-playlist.scroll.0 25670
+playlist.scroll.0 19237
 playlist.scroll.1 3040
-playlist.scroll.10 99
-playlist.scroll.11 2766
+playlist.scroll.10 0
+playlist.scroll.11 7778
 playlist.scroll.2 6173
 playlist.scroll.3 0
 playlist.scroll.4 0
@@ -139,22 +139,22 @@ playlist.tab.00010 Zoe
 playlist.tab.00011 shit
 prefwin.geometry.h 688
 prefwin.geometry.w 1194
-prefwin.geometry.x 141
-prefwin.geometry.y 112
+prefwin.geometry.x 123
+prefwin.geometry.y 111
 replaygain_mode 0
 replaygain_scale 1
 resume.paused 1
-resume.playlist 10
-resume.position 85.562377
-resume.track 13
+resume.playlist 0
+resume.position 316.48666
+resume.track 700
 search.column.00 "Title" "%t" -1 417 0
 search.column.01 "Artist" "%a" -1 202 0
 search.column.02 "Album" "%b" -1 179 0
 searchwin.geometry.h 613
 searchwin.geometry.maximized 0
 searchwin.geometry.w 1140
-searchwin.geometry.x 458
-searchwin.geometry.y 300
+searchwin.geometry.x 150
+searchwin.geometry.y 253
 streamer.8_to_16 1
 trkproperties.geometry.h 412
 trkproperties.geometry.w 841
