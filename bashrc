@@ -4,32 +4,8 @@
 # if not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# source encrypted partition handling functions
-[[ -f ~/p/crypt/crypt.sh ]] &&
-	source ~/p/crypt/crypt.sh
-
-# ssh agent stuff
-#eval $(ssh-agent)
-#export SSH_AGENT_PID=$(pgrep -ou $USER ssh-agent)
-#export SSH_AUTH_SOCK="$(find -L /tmp -type s -user $USER -name 'agent.*' 2>/dev/null | head -1)"
-
-# pgp setup
-# start gnupg ( if it isn't already running )
-gpgagent-start(){
-	eval $(gpg-agent --daemon --write-env-file "${HOME}/.gnupg/agent-info")
-}
-gpgagent-stop(){
-	killall gpg-agent
-}
-gpgagent-reload(){
-	echo RELOADAGENT | gpg-connect-agent
-}
-if [[ -e "${HOME}.gnupg/S.gpg-agent" ]]; then
-	source "${HOME}/.gnupg/agent-info"
-	export GPG_AGENT_INFO
-fi
-export PINENTRY_USER_DATA="USE_CURSES=1"
-export GNUPGHOME="~/keys/gpg/"
+# set tab width
+tabs 1$(for i in {0..39}; do echo ",+2"; done) >> /dev/null
 
 # aliases and functions
 alias ls="ls --color=auto"
@@ -100,6 +76,10 @@ prompt-c(){
 # enable prompt a
 prompt-a
 
+# source encrypted partition handling functions
+[[ -f ~/p/crypt/crypt.sh ]] &&
+	source ~/p/crypt/crypt.sh
+
 # apexctl stuff
 apex(){
 	xmodmap ~/.Xmodmap
@@ -115,5 +95,28 @@ git-push-all(){
 	done
 }
 
+# ssh agent stuff
+#eval $(ssh-agent)
+#export SSH_AGENT_PID=$(pgrep -ou $USER ssh-agent)
+#export SSH_AUTH_SOCK="$(find -L /tmp -type s -user $USER -name 'agent.*' 2>/dev/null | head -1)"
+
+# pgp stuff
+# start gnupg ( if it isn't already running )
+gpgagent-start(){
+	eval $(gpg-agent --daemon --write-env-file "${HOME}/.gnupg/agent-info")
+}
+gpgagent-stop(){
+	killall gpg-agent
+}
+gpgagent-reload(){
+	echo RELOADAGENT | gpg-connect-agent
+}
+if [[ -e "${HOME}.gnupg/S.gpg-agent" ]]; then
+	source "${HOME}/.gnupg/agent-info"
+	export GPG_AGENT_INFO
+fi
+export PINENTRY_USER_DATA="USE_CURSES=1"
+export GNUPGHOME="~/keys/gpg/"
+
 # fix little gnome terminal bug
-#source /etc/profile.d/vte.sh
+source /etc/profile.d/vte.sh
