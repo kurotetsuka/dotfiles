@@ -5,7 +5,7 @@
 [[ $- != *i* ]] && return
 
 # set tab width
-tabs 1$(for i in {0..39}; do echo ",+2"; done) >> /dev/null
+#tabs 1$(for i in {0..39}; do echo ",+2"; done)
 
 # aliases and functions
 alias ls="ls --color=auto"
