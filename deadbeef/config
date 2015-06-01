@@ -28,7 +28,7 @@ gtkui.override_bar_colors 1
 gtkui.override_listview_colors 1
 gtkui.override_tabstrip_colors 1
 gtkui.statusbar.visible 1
-gtkui.tabscroll 0
+gtkui.tabscroll 594
 gtkui.titlebar_playing :: %a - %t ::
 gtkui.titlebar_stopped :: Deadbeef ::
 gui_plugin GTK3
@@ -78,49 +78,49 @@ hotkeys_created 1
 ignore_archives 1
 junk.enable_cp1251_detection 1
 junk.enable_cp936_detection 1
-mainwin.geometry.h 745
+mainwin.geometry.h 758
 mainwin.geometry.maximized 0
-mainwin.geometry.w 1177
-mainwin.geometry.x 135
-mainwin.geometry.y 81
+mainwin.geometry.w 1150
+mainwin.geometry.x 1931
+mainwin.geometry.y 181
 mpris_v1.enable 0
 mpris_v2.enable 1
 network.http_user_agent deadbeef
 network.proxy.port 8080
 network.proxy.type HTTP
 playback.loop 0
-playback.order 1
+playback.order 0
 playback.volume 0.0000000
 playlist.column.00 "#" "%n" -1 37 0
 playlist.column.01 "Title" "%t" -1 506 0
 playlist.column.02 "Artist" "%a" -1 219 0
 playlist.column.03 "Album" "%b" -1 243 0
 playlist.column.04 "Duration" "%l" -1 80 0
-playlist.current 0
-playlist.cursor.0 700
-playlist.cursor.1 119
-playlist.cursor.10 1
-playlist.cursor.11 280
+playlist.current 6
+playlist.cursor.0 846
+playlist.cursor.1 71
+playlist.cursor.10 0
+playlist.cursor.11 0
 playlist.cursor.2 -1
-playlist.cursor.3 0
-playlist.cursor.4 3
-playlist.cursor.5 209
-playlist.cursor.6 34
-playlist.cursor.7 17
-playlist.cursor.8 288
-playlist.cursor.9 2
-playlist.scroll.0 19237
-playlist.scroll.1 3040
-playlist.scroll.10 0
-playlist.scroll.11 7778
+playlist.cursor.3 109
+playlist.cursor.4 0
+playlist.cursor.5 5
+playlist.cursor.6 0
+playlist.cursor.7 -1
+playlist.cursor.8 0
+playlist.cursor.9 0
+playlist.scroll.0 23388
+playlist.scroll.1 1681
+playlist.scroll.10 27
+playlist.scroll.11 2120
 playlist.scroll.2 6173
-playlist.scroll.3 0
+playlist.scroll.3 2752
 playlist.scroll.4 0
-playlist.scroll.5 5349
-playlist.scroll.6 642
-playlist.scroll.7 284
-playlist.scroll.8 7778
-playlist.scroll.9 0
+playlist.scroll.5 0
+playlist.scroll.6 0
+playlist.scroll.7 27
+playlist.scroll.8 27
+playlist.scroll.9 27
 playlist.scroll.cursorfollowplayback 1
 playlist.scroll.followplayback 1
 playlist.stop_after_current 0
@@ -128,25 +128,21 @@ playlist.stop_after_current_reset 0
 playlist.tab.00000 Shit
 playlist.tab.00001 Liked
 playlist.tab.00002 Metal
-playlist.tab.00003 Melodic
-playlist.tab.00004 Melodic Metal
-playlist.tab.00005 Chill
-playlist.tab.00006 All That Remains
-playlist.tab.00007 Mushroomhead
-playlist.tab.00008 Arch Enemy
-playlist.tab.00009 Mazjojo
-playlist.tab.00010 Zoe
-playlist.tab.00011 shit
+playlist.tab.00003 Chill
+playlist.tab.00004 Mazjojo
+playlist.tab.00005 Zoe
+playlist.tab.00006 Phillip Glass
+playlist.tab.00007 shit
 prefwin.geometry.h 688
 prefwin.geometry.w 1194
 prefwin.geometry.x 123
 prefwin.geometry.y 111
 replaygain_mode 0
 replaygain_scale 1
-resume.paused 1
-resume.playlist 0
-resume.position 316.48666
-resume.track 700
+resume.paused 0
+resume.playlist 6
+resume.position -1.000000
+resume.track -1
 search.column.00 "Title" "%t" -1 417 0
 search.column.01 "Artist" "%a" -1 202 0
 search.column.02 "Album" "%b" -1 179 0

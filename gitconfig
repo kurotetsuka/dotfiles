@@ -1,7 +1,7 @@
 [user]
 	name = kurotetsuka
 	email = kurotetsuka@gmail.com
-	signingkey = 0a1a20c0
+	signingkey = f282b083
 [core]
 	editor = subl -w
 [push]

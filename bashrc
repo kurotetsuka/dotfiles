@@ -15,15 +15,24 @@ alias l.="ls -al --color=auto"
 alias ss="scrot -s scrot_%Y-%m-%d_%H%M%S.png"
 alias R="R --no-save -q"
 export EDITOR="subl3 -w"
+
 # add to path
 export PATH=$PATH":~/.local/bin"
 export PATH=$PATH":$(ruby -rubygems -e "puts Gem.user_dir")/bin"
 export PATH=$PATH":~/.cabal/bin"
+
 # set ld library path for rustc
 LD_LIBRARY_PATH="/usr/local/lib:/usr/lib"
 export LD_LIBRARY_PATH
+
+# add bash completions for sudo
+complete -cf sudo
+
 # bspwm panel thingy
 export PANEL_FIFO="/tmp/panel-fifo"
+
+# android development
+export ANDROID_HOME=/opt/android-sdk
 
 # colours :D
 white="\[\e[0;37m\]"
