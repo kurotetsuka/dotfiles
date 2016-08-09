@@ -3,7 +3,7 @@
 	email = kurotetsuka@gmail.com
 	signingkey = f282b083
 [core]
-	editor = subl -w
+	editor = vim
 [push]
 	default = matching
 [commit]

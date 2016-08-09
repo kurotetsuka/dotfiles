@@ -128,4 +128,4 @@ export PINENTRY_USER_DATA="USE_CURSES=1"
 export GNUPGHOME="~/keys/gpg/"
 
 # fix little gnome terminal bug
-source /etc/profile.d/vte.sh
+#source /etc/profile.d/vte.sh
