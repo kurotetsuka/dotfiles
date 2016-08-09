@@ -69,13 +69,20 @@ prompt-a(){
 	export PS4="$awesome_colour>>>$no_colour "
 }
 prompt-b(){
-	export PS1="$bpurple\$$no_colour "
+	export PS1="$bpurple[$awesome_colour\u$bpurple@$awesome_colour\h$no_colour $face $bblue\W$bpurple]λ$no_colour "
 	#export PS1="$awesome_colour\$$no_colour "
 	export PS2="$awesome_colour>$no_colour "
 	export PS3="$awesome_colour>>$no_colour "
 	export PS4="$awesome_colour>>>$no_colour "
 }
 prompt-c(){
+	export PS1="$bpurple\$$no_colour "
+	#export PS1="$awesome_colour\$$no_colour "
+	export PS2="$awesome_colour>$no_colour "
+	export PS3="$awesome_colour>>$no_colour "
+	export PS4="$awesome_colour>>>$no_colour "
+}
+prompt-d(){
 	export PS1="$bpurpleλ$no_colour "
 	#export PS1="$awesome_colour\$$no_colour "
 	export PS2="$awesome_colour>$no_colour "
@@ -83,11 +90,11 @@ prompt-c(){
 	export PS4="$awesome_colour>>>$no_colour "
 }
 # enable prompt a
-prompt-a
+prompt-b
 
 # source encrypted partition handling functions
-[[ -f ~/p/crypt/crypt.sh ]] &&
-	source ~/p/crypt/crypt.sh
+[[ -f ~/p/crypt.sh/crypt.sh ]] &&
+	source ~/p/crypt.sh/crypt.sh
 
 # apexctl stuff
 apex(){
