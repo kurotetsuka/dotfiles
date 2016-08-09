@@ -1,7 +1,8 @@
+artwork.filemask *cover*.jpg;*front*.jpg;*folder*.jpg;*cover*.png;*front*.png;*folder*.png
 cli_add_playlist_name shit
 cli_add_to_specific_playlist 1
 close_send_to_tray 1
-deadbeef_version 0.6.2
+deadbeef_version 0.7.2
 filechooser.lastdir file:///mnt/data/music
 filechooser.playlist.lastdir file:///home/kurotetsuka/Music/Playlists
 gtkui.color.bar_background 4587 4587 4587
@@ -17,20 +18,24 @@ gtkui.color.tabstrip_dark 4369 4369 4369
 gtkui.color.tabstrip_light 11822 13364 13878
 gtkui.color.tabstrip_mid 4677 4677 4677
 gtkui.color.tabstrip_text 20943 43034 36359
+gtkui.columns.playlist [{"title":"#","id":"-1","format":"%tracknumber%","size":"37","align":"0","color_override":"0","color":"#ff000000"},{"title":"Title","id":"-1","format":"%title%","size":"506","align":"0","color_override":"0","color":"#ff000000"},{"title":"Artist","id":"-1","format":"%artist%","size":"219","align":"0","color_override":"0","color":"#ff000000"},{"title":"Album","id":"-1","format":"%album%","size":"243","align":"0","color_override":"0","color":"#ff000000"},{"title":"Duration","id":"-1","format":"%length%","size":"80","align":"0","color_override":"0","color":"#ff000000"}]
+gtkui.columns.search [{"title":"Title","id":"-1","format":"%title%","size":"417","align":"0"},{"title":"Artist","id":"-1","format":"%artist%","size":"202","align":"0"},{"title":"Album","id":"-1","format":"%album%","size":"179","align":"0"}]
 gtkui.eq.visible 0
 gtkui.hide_tray_icon 0
 gtkui.last_playlist_save_name /home/kurotetsuka/Music/Playlists/autotheist-movement.dbpl
 gtkui.layout tabbed_playlist hideheaders=0 {} 
-gtkui.layout.0.6.2 vbox expand="0 1" fill="1 1" homogeneous=0 {hbox expand="0 1 0" fill="1 1 1" homogeneous=0 {playtb {} seekbar {} volumebar {} } tabbed_playlist hideheaders=0 {} } 
+gtkui.layout.0.6.2 vbox expand="0 1" fill="1 1" homogeneous=0 {hbox expand="0 1 0" fill="1 1 1" homogeneous=0 {playtb {} seekbar {} volumebar {} } tabbed_playlist hideheaders=0 width=1315 {} } 
 gtkui.mmb_delete_playlist 1
 gtkui.name_playlist_from_folder 1
 gtkui.override_bar_colors 1
 gtkui.override_listview_colors 1
 gtkui.override_tabstrip_colors 1
 gtkui.statusbar.visible 1
-gtkui.tabscroll 594
+gtkui.tabscroll 562
 gtkui.titlebar_playing :: %a - %t ::
+gtkui.titlebar_playing_tf :: %artist% - %title% ::
 gtkui.titlebar_stopped :: Deadbeef ::
+gtkui.titlebar_stopped_tf :: Deadbeef ::
 gui_plugin GTK3
 hotkey.key01 "Ctrl f" 0 0 find
 hotkey.key02 "Ctrl o" 0 0 open_files
@@ -74,51 +79,54 @@ hotkey.key39 "Shift Left" 0 0 seek_1p_back
 hotkey.key40 "Right" 0 0 next
 hotkey.key41 "Left" 0 0 prev
 hotkey.key42 "space" 0 0 play_pause
+hotkey.key43 "Super KP_Begin" 0 1 play_pause
+hotkey.key44 "Super KP_Left" 0 1 prev
+hotkey.key45 "Super KP_Right" 0 1 next
 hotkeys_created 1
 ignore_archives 1
 junk.enable_cp1251_detection 1
 junk.enable_cp936_detection 1
-mainwin.geometry.h 758
+mainwin.geometry.h 843
 mainwin.geometry.maximized 0
-mainwin.geometry.w 1150
-mainwin.geometry.x 1931
-mainwin.geometry.y 181
+mainwin.geometry.w 1315
+mainwin.geometry.x 211
+mainwin.geometry.y 115
 mpris_v1.enable 0
 mpris_v2.enable 1
 network.http_user_agent deadbeef
 network.proxy.port 8080
 network.proxy.type HTTP
 playback.loop 0
-playback.order 0
+playback.order 1
 playback.volume 0.0000000
 playlist.column.00 "#" "%n" -1 37 0
 playlist.column.01 "Title" "%t" -1 506 0
 playlist.column.02 "Artist" "%a" -1 219 0
 playlist.column.03 "Album" "%b" -1 243 0
 playlist.column.04 "Duration" "%l" -1 80 0
-playlist.current 6
-playlist.cursor.0 846
-playlist.cursor.1 71
+playlist.current 7
+playlist.cursor.0 579
+playlist.cursor.1 22
 playlist.cursor.10 0
 playlist.cursor.11 0
 playlist.cursor.2 -1
-playlist.cursor.3 109
-playlist.cursor.4 0
+playlist.cursor.3 135
+playlist.cursor.4 4
 playlist.cursor.5 5
 playlist.cursor.6 0
-playlist.cursor.7 -1
+playlist.cursor.7 18
 playlist.cursor.8 0
 playlist.cursor.9 0
-playlist.scroll.0 23388
-playlist.scroll.1 1681
+playlist.scroll.0 14821
+playlist.scroll.1 547
 playlist.scroll.10 27
 playlist.scroll.11 2120
-playlist.scroll.2 6173
-playlist.scroll.3 2752
+playlist.scroll.2 0
+playlist.scroll.3 3173
 playlist.scroll.4 0
 playlist.scroll.5 0
 playlist.scroll.6 0
-playlist.scroll.7 27
+playlist.scroll.7 237
 playlist.scroll.8 27
 playlist.scroll.9 27
 playlist.scroll.cursorfollowplayback 1
@@ -135,12 +143,12 @@ playlist.tab.00006 Phillip Glass
 playlist.tab.00007 shit
 prefwin.geometry.h 688
 prefwin.geometry.w 1194
-prefwin.geometry.x 123
-prefwin.geometry.y 111
+prefwin.geometry.x 273
+prefwin.geometry.y 195
 replaygain_mode 0
 replaygain_scale 1
 resume.paused 0
-resume.playlist 6
+resume.playlist 7
 resume.position -1.000000
 resume.track -1
 search.column.00 "Title" "%t" -1 417 0
